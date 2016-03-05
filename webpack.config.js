@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: ['./src/index.ts', 'webpack-hot-middleware/client']
+    app: ['./src/index.tsx', 'webpack-hot-middleware/client']
   },
   output: {
     path: path.join(__dirname, 'dist'),

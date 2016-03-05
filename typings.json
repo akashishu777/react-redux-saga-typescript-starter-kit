@@ -1,0 +1,14 @@
+{
+  "ambientDependencies": {
+    "loglevel": "github:DefinitelyTyped/DefinitelyTyped/loglevel/loglevel.d.ts#e85bc9decb401ea14d29143def204d82ec41e9e1",
+    "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#48c1e3c1d6baefa4f1a126f188c27c4fefd36bff",
+    "react": "github:DefinitelyTyped/DefinitelyTyped/react/react.d.ts#945ebfe049964e429c2530971b9081f3c0f611df",
+    "react-dom": "github:DefinitelyTyped/DefinitelyTyped/react/react-dom.d.ts#ca5bfe76d2d9bf6852cbc712d9f3e0047c93486e"
+  },
+  "dependencies": {
+    "history": "github:andrew-w-ross/typings-history#be23dc3c22f824e990c1aaabbae205b867408484",
+    "react-redux": "github:andrew-w-ross/typings-react-redux#6be88a57427f8ec220cad13d68565fd5f5711146",
+    "react-router": "github:andrew-w-ross/typings-react-router#f36f207864367bd5f838b2c50b49ed6dfe88d71c",
+    "redux": "github:andrew-w-ross/typings-redux#2e0b57e18c6240d17fde045573d74e649762437b"
+  }
+}
