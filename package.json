@@ -1,0 +1,23 @@
+{
+  "name": "react-redux-typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "dev": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tinh Ngo",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-loader": "0.8.1",
+    "typescript": "1.8.7",
+    "webpack": "^1.12.14",
+    "html-webpack-plugin": "^2.9.0",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-hot-middleware": "^2.9.1"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
