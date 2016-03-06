@@ -19,10 +19,12 @@ import { syncHistoryWithStore } from 'react-router-redux'
 import routes from './store/routes'
 import configureStore from './store/configureStore'
 
-const store = configureStore({});
+const store = configureStore({}, browserHistory);
 
 // create an enhanced history that syncs navigation events with the store
-const history = syncHistoryWithStore(browserHistory, store)
+const history = syncHistoryWithStore(browserHistory, store, {
+  selectLocationState: (state) => state.router,
+})
 
 ReactDOM.render(
   <div>
@@ -34,3 +36,4 @@ ReactDOM.render(
   </div>,
   document.getElementById('root')
 );
+

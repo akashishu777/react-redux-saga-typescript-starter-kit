@@ -1,4 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux'
+import { routerMiddleware } from 'react-router-redux'
+
 import logger from './logger';
 import rootReducer from '../reducers';
 
@@ -12,13 +14,11 @@ interface IHotNodeModule extends NodeModule {
 declare let __DEV__: boolean;
 declare let module: IHotNodeModule;
 
-// const reduxRouterMiddleware = syncHistoryWithStore(browserHistory);
-
-function configureStore(initialState) {
+function configureStore(initialState, history) {
   const store = compose(
     __DEV__
-      ? applyMiddleware(logger)
-      : applyMiddleware()
+      ? applyMiddleware(routerMiddleware(history), logger)
+      : applyMiddleware(routerMiddleware(history))
   )(createStore)(rootReducer, initialState);
 
   if (module.hot) {
