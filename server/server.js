@@ -1,12 +1,17 @@
 var http = require('http');
 var express = require('express');
 var webpack = require('webpack');
+var historyApiFallback = require('connect-history-api-fallback')
 
 var webpackConfig = require('./../webpack.config');
 
 var compiler = webpack(webpackConfig);
 
 var app = express();
+
+app.use(historyApiFallback({
+  verbose: false
+}));
 
 app.use(require("webpack-dev-middleware")(compiler, {
   noInfo: true,
