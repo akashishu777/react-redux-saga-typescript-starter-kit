@@ -2,13 +2,13 @@
   "ambientDependencies": {
     "loglevel": "github:DefinitelyTyped/DefinitelyTyped/loglevel/loglevel.d.ts#e85bc9decb401ea14d29143def204d82ec41e9e1",
     "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#48c1e3c1d6baefa4f1a126f188c27c4fefd36bff",
-    "react": "github:DefinitelyTyped/DefinitelyTyped/react/react.d.ts#945ebfe049964e429c2530971b9081f3c0f611df",
-    "react-dom": "github:DefinitelyTyped/DefinitelyTyped/react/react-dom.d.ts#ca5bfe76d2d9bf6852cbc712d9f3e0047c93486e"
-  },
-  "dependencies": {
-    "history": "github:andrew-w-ross/typings-history#be23dc3c22f824e990c1aaabbae205b867408484",
-    "react-redux": "github:andrew-w-ross/typings-react-redux#6be88a57427f8ec220cad13d68565fd5f5711146",
-    "react-router": "github:andrew-w-ross/typings-react-router#f36f207864367bd5f838b2c50b49ed6dfe88d71c",
-    "redux": "github:andrew-w-ross/typings-redux#2e0b57e18c6240d17fde045573d74e649762437b"
+    "react": "github:DefinitelyTyped/DefinitelyTyped/react/react.d.ts#4169370da25a366a4e44090db92916bc0106b443",
+    "react-dom": "github:DefinitelyTyped/DefinitelyTyped/react/react-dom.d.ts#ca5bfe76d2d9bf6852cbc712d9f3e0047c93486e",
+    "react-redux": "github:DefinitelyTyped/DefinitelyTyped/react-redux/react-redux.d.ts#4169370da25a366a4e44090db92916bc0106b443",
+    "react-router": "github:DefinitelyTyped/DefinitelyTyped/react-router/react-router.d.ts#9a81f3dc342a3734c2e0f75110d0d91f627c9ed4",
+    "react-router-redux": "github:DefinitelyTyped/DefinitelyTyped/react-router-redux/react-router-redux.d.ts#9a81f3dc342a3734c2e0f75110d0d91f627c9ed4",
+    "redux": "github:DefinitelyTyped/DefinitelyTyped/redux/redux.d.ts#a0aac300ebf740324732d5ddae7d815aac0b7ab7",
+    "redux-logger": "github:DefinitelyTyped/DefinitelyTyped/redux-logger/redux-logger.d.ts#a0aac300ebf740324732d5ddae7d815aac0b7ab7",
+    "history": "github:DefinitelyTyped/DefinitelyTyped/react-router/history.d.ts#9a81f3dc342a3734c2e0f75110d0d91f627c9ed4"
   }
 }
