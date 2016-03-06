@@ -10,7 +10,7 @@ interface IAction {
 
 const INITIAL_STATE = 0
 
-function counterReducer(state, action?) {
+function counterReducer(state = 0, action?) {
   if (typeof state === 'undefined') {
     return INITIAL_STATE
   }
