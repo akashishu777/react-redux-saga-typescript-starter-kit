@@ -10,7 +10,6 @@ interface IHotNodeModule extends NodeModule {
   hot: { accept: Function };
 };
 
-// This global is used to turn on redux dev tools when in dev mode.
 declare let __DEV__: boolean;
 declare let module: IHotNodeModule;
 

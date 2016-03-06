@@ -1,6 +1,8 @@
 ## TODO
 
 require from the root
+redux thunk
+action creator
 
 typings install history --save --ambient \
 && typings install redux --save --ambient \
