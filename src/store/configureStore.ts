@@ -14,7 +14,7 @@ interface IHotNodeModule extends NodeModule {
 declare let __DEV__: boolean;
 declare let module: IHotNodeModule;
 
-function configureStore(initialState, history) {
+function configureStore(initialState = {}, history) {
   const store = compose(
     __DEV__
       ? applyMiddleware(routerMiddleware(history), logger)

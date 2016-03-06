@@ -7,7 +7,7 @@
     "experimentalDecorators": true,
     "noImplicitAny": false,
     "removeComments": false,
-    "jsx": "react"
+    "jsx": "preserve"
   },
   "exclude": [
     "node_modules",

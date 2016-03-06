@@ -11,6 +11,7 @@ console.log(it.next());       // { value:6, done:false }
 console.log(it.next(12));   // { value:8, done:false }
 console.log(it.next(13));   // { value:42, done:true }
 
+import 'babel-polyfill'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
