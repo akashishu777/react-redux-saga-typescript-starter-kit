@@ -11,9 +11,6 @@ interface IAction {
 const INITIAL_STATE = 0
 
 function counterReducer(state = 0, action?) {
-  if (typeof state === 'undefined') {
-    return INITIAL_STATE
-  }
   switch (action.type) {
 
   case COUNTER_INCREASE:
