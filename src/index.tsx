@@ -19,7 +19,16 @@ import { syncHistoryWithStore } from 'react-router-redux'
 import routes from './store/routes'
 import configureStore from './store/configureStore'
 
-const store = configureStore({}, browserHistory);
+const INITIAL_STATE = {
+  counter: 1,
+}
+
+const store = configureStore(INITIAL_STATE, browserHistory)
+
+declare let __DEV__: boolean;
+if (__DEV__) {
+  window['store'] = store
+}
 
 // create an enhanced history that syncs navigation events with the store
 const history = syncHistoryWithStore(browserHistory, store, {

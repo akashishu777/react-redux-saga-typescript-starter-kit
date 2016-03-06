@@ -1,14 +1,22 @@
 import * as React from 'react'
+import { connect } from 'react-redux'
 
 import { Counter } from 'components/Counter/Counter'
+import { counterObjectSelector } from 'selectors/counter'
 
-export class CounterPage extends React.Component<{}, {}> {
+interface ICounterPage {
+  count: number
+}
+
+class CounterPage extends React.Component<ICounterPage, {}> {
 
   public render(): React.ReactElement<{}> {
     const handle = () => console.log('action')
 
     return (
-      <Counter count={ 1 } onIncrease={ handle } onDecrease={ handle } />
+      <Counter count={ this.props.count } onIncrease={ handle } onDecrease={ handle } />
     );
   }
 }
+
+export default connect(counterObjectSelector)(CounterPage)

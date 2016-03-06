@@ -10,7 +10,7 @@ interface IAction {
 
 const INITIAL_STATE = 0
 
-function counterReducer(state = 0, action?) {
+function counterReducer(state = INITIAL_STATE, action?) {
   switch (action.type) {
 
   case COUNTER_INCREASE:
