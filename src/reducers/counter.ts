@@ -1,6 +1,7 @@
 import {
   COUNTER_INCREASE,
   COUNTER_DECREASE,
+  COUNTER_ADDITION,
 } from '../constants'
 
 interface IAction {
@@ -9,13 +10,12 @@ interface IAction {
 }
 
 const ACTION_HANDLERS = {
-  [COUNTER_INCREASE]: (state: number, action: {payload: number}): number => state + action.payload,
-  [COUNTER_INCREASE]: (state: number, action: {payload: number}): number => state + action.payload,
+  [COUNTER_INCREASE]: (state: number): number => state + 1,
+  [COUNTER_DECREASE]: (state: number): number => state - 1,
+  [COUNTER_ADDITION]: (state: number, action: {payload: number}): number => state + 1,
 }
 
 const INITIAL_STATE = 0
-
-export default counterReducer
 
 export default function counterReducer (state: number = INITIAL_STATE, action: IAction): number {
   const handler = ACTION_HANDLERS[action.type]

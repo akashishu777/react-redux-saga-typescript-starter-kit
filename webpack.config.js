@@ -26,7 +26,39 @@ module.exports = {
       }
     ],
     loaders: [
-      { test: /\.tsx?$/, loader: 'ts-loader' }
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader'
+      },
+      {
+        test: /\.css$/,
+        include: /src/,
+        loaders: [
+          'style',
+          [
+            'css?modules',
+            'sourceMap',
+            'importLoaders=1',
+            'localIdentName=[name]__[local]___[hash:base64:5]'
+          ].join('&'),
+          'postcss'
+        ]
+      },
+      {
+        test: /\.css$/,
+        exclude: /src/,
+        loaders: [
+          'style',
+          'css?sourceMap',
+          'postcss'
+        ]
+      },
+      { test: /\.woff(\?.*)?$/,  loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff' },
+      { test: /\.woff2(\?.*)?$/, loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/font-woff2' },
+      { test: /\.ttf(\?.*)?$/,   loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=application/octet-stream' },
+      { test: /\.eot(\?.*)?$/,   loader: 'file?prefix=fonts/&name=[path][name].[ext]' },
+      { test: /\.svg(\?.*)?$/,   loader: 'url?prefix=fonts/&name=[path][name].[ext]&limit=10000&mimetype=image/svg+xml' },
+      { test: /\.(png|jpg)$/,    loader: 'url?limit=8192' }
     ]
   },
   plugins: [
