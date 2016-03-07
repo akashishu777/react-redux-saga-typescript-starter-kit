@@ -14,13 +14,21 @@ interface ICounterPage {
 
 class CounterPage extends React.Component<ICounterPage, {}> {
 
+  handleIncreaseCounter = () => {
+    this.props.increment()
+  }
+
+  handleDecreaseCounter = () => {
+    this.props.decrement()
+  }
+
   public render(): React.ReactElement<{}> {
 
     return (
       <Counter
         count={ this.props.count }
-        onIncrease={ this.props.increment.bind(this) }
-        onDecrease={ this.props.decrement.bind(this) } />
+        onIncrease={ this.handleIncreaseCounter }
+        onDecrease={ this.handleDecreaseCounter } />
     );
   }
 }
