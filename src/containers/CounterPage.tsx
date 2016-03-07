@@ -15,7 +15,6 @@ interface ICounterPage {
 class CounterPage extends React.Component<ICounterPage, {}> {
 
   public render(): React.ReactElement<{}> {
-    const handle = () => console.log('action')
 
     return (
       <Counter
