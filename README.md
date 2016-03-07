@@ -7,6 +7,9 @@ redux thunk
 redux saga - async increase count
 action creator
 css module
+add 
+lodash fn vs ramda
+react css modules
 
 ## NOTE
 

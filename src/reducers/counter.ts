@@ -8,20 +8,17 @@ interface IAction {
   payload: any
 }
 
-const INITIAL_STATE = 0
-
-function counterReducer(state = INITIAL_STATE, action?) {
-  switch (action.type) {
-
-  case COUNTER_INCREASE:
-    return state + 1
-
-  case COUNTER_DECREASE:
-    return state - 1
-  default:
-    return state
-  }
+const ACTION_HANDLERS = {
+  [COUNTER_INCREASE]: (state: number, action: {payload: number}): number => state + action.payload,
+  [COUNTER_INCREASE]: (state: number, action: {payload: number}): number => state + action.payload,
 }
 
+const INITIAL_STATE = 0
 
 export default counterReducer
+
+export default function counterReducer (state: number = INITIAL_STATE, action: IAction): number {
+  const handler = ACTION_HANDLERS[action.type]
+
+  return handler ? handler(state, action) : state
+}
