@@ -1,5 +1,36 @@
 #react redux saga typescript boilerplate
 
+## prerequisites
+
+NodeJs 5.x
+
+Install ts-lint, typings (might need sudo)
+```
+npm install ts-lint -g
+```
+
+```
+npm install typings -g
+```
+
+on project root directory, run the following commands:
+
+```
+npm install
+```
+
+```
+typings install
+```
+
+Run the following command to run the server in dev mode:
+
+```
+npm run dev
+```
+
+visit the site at http://localhost:7000
+
 ## TODO
 
 require from the root

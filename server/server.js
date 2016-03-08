@@ -29,6 +29,6 @@ app.use(require("webpack-dev-middleware")(compiler, {
 app.use(require("webpack-hot-middleware")(compiler));
 
 var server = http.createServer(app);
-server.listen(process.env.PORT || 3000, function() {
+server.listen(process.env.PORT || 7000, function() {
   console.log("Listening on %j", server.address().port);
 });
